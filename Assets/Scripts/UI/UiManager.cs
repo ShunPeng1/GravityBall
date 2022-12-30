@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +34,24 @@ public class UiManager : MonoBehaviour
     }
     #endregion
 
+    private void Start()
+    {
+        StallingGame();
+        initGameMenu.SetActive(true);
+    }
+
+    #region Init
+    [Header("Init Game")]
+    [SerializeField] private GameObject initGameMenu;
+
+    public void DoneInit()
+    {
+        initGameMenu.SetActive(false);
+        ResumingGame();
+    }
+    
+    #endregion
+    
     #region Score
     [Header("Score")]
     [SerializeField] private TextMeshProUGUI textScore;
@@ -98,4 +117,6 @@ public class UiManager : MonoBehaviour
     
     #endregion
 
+
+    
 }

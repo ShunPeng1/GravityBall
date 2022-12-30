@@ -37,11 +37,11 @@ public class FollowGyro : MonoBehaviour
     {
         gyroRotation = GyroManager.Instance.GetGyroRotation();
         Quaternion swapYZRotation = new Quaternion(gyroRotation.x,gyroRotation.z,gyroRotation.y, - gyroRotation.w);
-        
-        _rigidbody.rotation = (swapYZRotation * baseRotation).normalized;
+        transform.rotation = (swapYZRotation * baseRotation).normalized;
+        //_rigidbody.rotation = (swapYZRotation * baseRotation).normalized;
 
         //Quaternion rotationDifference = (Quaternion.Inverse( gameObject.transform.rotation ) * swapYZRotation)  ;
-        
+
         //_rigidbody.MoveRotation(swapYZRotation.normalized);
         //Debug.Log("Rotation Difference "+ rotationDifference);
         //_rigidbody.angularVelocity = rotationDifference.eulerAngles * (Time.fixedDeltaTime * Mathf.Deg2Rad);

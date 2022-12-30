@@ -29,7 +29,7 @@ public  class PlayerGyroMovement : MonoBehaviour
         
         gyroAngle = (swapYZRotation * baseRotation).eulerAngles;
         _velocity = new Vector3(Mathf.Sin(gyroAngle.x * Mathf.Deg2Rad),0 ,Mathf.Sin(gyroAngle.z * Mathf.Deg2Rad)) * speed;
-
+        
         _rigidbody.velocity = _velocity;
     }
 }
