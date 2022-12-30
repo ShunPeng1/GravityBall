@@ -47,7 +47,7 @@ public class UiManager : MonoBehaviour
     #region Pause
     [Header("Pause")]
     [SerializeField] private GameObject pauseMenu;
-    [SerializeField] private Button pauseButton;
+    [SerializeField] private GameObject pauseButton;
 
     private void StallingGame(){
         Time.timeScale = 0;
@@ -61,14 +61,14 @@ public class UiManager : MonoBehaviour
     {
         StallingGame();
         pauseMenu.SetActive(true);
-        pauseButton.interactable = false;
+        pauseButton.SetActive(false);
     }
     
     public void Unpausing()
     {
         ResumingGame();
         pauseMenu.SetActive(false);
-        pauseButton.interactable = true;
+        pauseButton.SetActive(true);
     }
 
     #endregion
@@ -85,4 +85,17 @@ public class UiManager : MonoBehaviour
     
     #endregion
     
+    
+    #region LoseGame
+    [Header("Lose Game")]
+    [SerializeField] private GameObject loseGameMenu;
+
+    public void Losing()
+    {
+        loseGameMenu.SetActive(true);
+        StallingGame();
+    }
+    
+    #endregion
+
 }

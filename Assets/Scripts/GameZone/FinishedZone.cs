@@ -20,7 +20,6 @@ public abstract class FinishedZone : MonoBehaviour
         }
         
     }
-
     private void DelayWinning()
     {
         UiManager.Instance.Winning();
