@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.567985, g: 0.6567929, b: 0.77997583, a: 1}
+  m_IndirectSpecularColor: {r: 0.5679971, g: 0.6568136, b: 0.7800117, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1785,6 +1785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcfa3e93838b9804b87739efd163cb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _debugText: {fileID: 0}
 --- !u!1001 &652112363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6170,6 +6171,10 @@ PrefabInstance:
     - target: {fileID: 5708112028234283255, guid: 03d968c749aae1b43b88a5eb40b79f7c, type: 3}
       propertyPath: m_AngularDrag
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708112028234283255, guid: 03d968c749aae1b43b88a5eb40b79f7c, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03d968c749aae1b43b88a5eb40b79f7c, type: 3}
