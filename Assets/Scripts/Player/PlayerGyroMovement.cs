@@ -21,9 +21,10 @@ public  class PlayerGyroMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         gyroRotation = GyroManager.Instance.GetGyroRotation();
+        Debug.Log(gyroRotation);
         Quaternion swapYZRotation = new Quaternion(gyroRotation.x,gyroRotation.z,gyroRotation.y, - gyroRotation.w);
         gyroRotation = swapYZRotation;
         
