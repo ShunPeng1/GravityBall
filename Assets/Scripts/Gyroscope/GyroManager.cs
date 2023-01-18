@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GyroManager : MonoBehaviour
@@ -61,6 +62,8 @@ public class GyroManager : MonoBehaviour
         if (gyroActive)
         {
             _rotation = _gyro.attitude;
+            
+            Debugging();
             //Debug.Log(_rotation);
         }
     }
@@ -69,4 +72,22 @@ public class GyroManager : MonoBehaviour
     {
         return _rotation;
     }
+
+    #region Debug
+
+    [SerializeField] private TextMeshProUGUI debugText;
+    private Vector3 velocity;
+    private float currentTime = 0;
+    private void Debugging()
+    {
+        if (debugText != null)
+        {
+            velocity += _gyro.userAcceleration * Time.deltaTime;
+            currentTime += Time.deltaTime;
+            debugText.text = _gyro.userAcceleration.ToString() + "\n" + velocity.ToString()+"\n"+ currentTime.ToString() + "\n" + Time.deltaTime.ToString();
+        }
+    }
+
+    #endregion
+
 }
