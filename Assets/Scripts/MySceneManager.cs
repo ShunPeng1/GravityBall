@@ -2,22 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class SceneManager : MonoBehaviour
+public class MySceneManager : MonoBehaviour
 {
     #region Instance
 
-    private static SceneManager _instance;
+    private static MySceneManager _instance;
 
-    public static SceneManager Instance
+    public static MySceneManager Instance
     {
         get
         {
             if (_instance == null)
             {
-                _instance = FindObjectOfType < SceneManager>();
+                _instance = FindObjectOfType < MySceneManager>();
                 if (_instance == null)
                 {
-                    _instance = new GameObject("Spawned SceneManager", typeof(SceneManager)).GetComponent <SceneManager>();
+                    _instance = new GameObject("Spawned SceneManager", typeof(MySceneManager)).GetComponent <MySceneManager>();
                 }
             }
 

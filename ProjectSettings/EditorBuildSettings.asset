@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GyroLevel1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GyroLevel2.unity
     guid: ef99aebb033cc9d42b2bf972a6b58670
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/GyroLevel3.unity
+    guid: 8e958c1e5f14e684899de43ae217410a
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ca9b405510808147b8f48a869d47ce1, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: e3c585640958ef14396340a6e6e9a4e3, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 9a1a133aacf70a944868296321f8031a, type: 2}
